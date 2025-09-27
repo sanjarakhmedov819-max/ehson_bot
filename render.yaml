@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: WEBHOOK_SECRET
+        value: secret123
+      - key: BASE_URL
+        value: ""   # keyin Render Public URL ni shu yerga qo'yasiz
